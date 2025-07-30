@@ -1,0 +1,101 @@
+{
+  "language": "bash",
+  "groups": [
+    [0, 50],
+    [51, 100],
+    [101, 150],
+    [151, 9999]
+  ],
+  "quotes": [
+    {
+      "text": "find /var/log -name \"*.log\" -type f -mtime +30 -exec rm {} \\;",
+      "source": "GNU Findutils Manual",
+      "length": 62,
+      "id": 1
+    },
+    {
+      "text": "tar -czf backup_$(date +%Y%m%d).tar.gz /home/user/documents --exclude='*.tmp'",
+      "source": "GNU Tar Manual",
+      "length": 77,
+      "id": 2
+    },
+    {
+      "text": "rsync -avz --progress --delete /local/path/ user@remote.server.com:/remote/backup/",
+      "source": "rsync Manual",
+      "length": 82,
+      "id": 3
+    },
+    {
+      "text": "grep -r \"ERROR\" /var/log/ | grep $(date +%Y-%m-%d) | wc -l",
+      "source": "GNU Grep Manual",
+      "length": 58,
+      "id": 4
+    },
+    {
+      "text": "awk -F',' '{sum+=$3} END {print \"Total:\", sum}' sales_data.csv",
+      "source": "GNU Awk Manual",
+      "length": 62,
+      "id": 5
+    },
+    {
+      "text": "sed -i 's/old_server_name/new_server_name/g' /etc/nginx/sites-available/default",
+      "source": "GNU Sed Manual",
+      "length": 79,
+      "id": 6
+    },
+    {
+      "text": "curl -X POST -H \"Content-Type: application/json\" -d '{\"username\":\"admin\",\"password\":\"secret\"}' https://api.example.com/login",
+      "source": "cURL Manual",
+      "length": 124,
+      "id": 7
+    },
+    {
+      "text": "docker run -d --name webapp -p 8080:80 -v /host/data:/container/data nginx:latest",
+      "source": "Docker Documentation",
+      "length": 81,
+      "id": 8
+    },
+    {
+      "text": "ssh -L 8080:localhost:80 -N -f user@remote.server.com",
+      "source": "OpenSSH Manual",
+      "length": 54,
+      "id": 9
+    },
+    {
+      "text": "for file in *.txt; do mv \"$file\" \"${file%.txt}_backup.txt\"; done",
+      "source": "Bash Reference Manual",
+      "length": 65,
+      "id": 10
+    },
+    {
+      "text": "ps aux | sort -k 3 -nr | head -10 | awk '{print $2, $3, $11}'",
+      "source": "Process Status Manual",
+      "length": 62,
+      "id": 11
+    },
+    {
+      "text": "git log --oneline --graph --all --since=\"2 weeks ago\" --author=\"john@example.com\"",
+      "source": "Git Documentation",
+      "length": 80,
+      "id": 12
+    },
+    {
+      "text": "kubectl get pods --all-namespaces -o wide | grep -v Running | awk '{print $1, $2, $4}'",
+      "source": "Kubernetes Documentation",
+      "length": 86,
+      "id": 13
+    },
+    {
+      "text": "ffmpeg -i input.mp4 -vcodec libx264 -acodec aac -b:v 2M -b:a 128k output.mp4",
+      "source": "FFmpeg Documentation",
+      "length": 77,
+      "id": 14
+    },
+    {
+      "text": "mysql -u root -p -e \"SELECT table_name, table_rows FROM information_schema.tables WHERE table_schema='mydb';\"",
+      "source": "MySQL Documentation",
+      "length": 109,
+      "id": 15
+    }
+  ]
+}
